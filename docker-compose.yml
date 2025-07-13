@@ -6,3 +6,15 @@ services:
     build: .
     ports:
      - "3000:3000"   
+    volumes:
+     - app-data:/app/logs
+    networks:
+      - app-net
+        
+
+
+volumes:
+  app-data:
+networks:
+  app-net:
+    driver: bridge
